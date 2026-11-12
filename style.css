@@ -1,0 +1,297 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffe7f5;
+    color: #390b4c;
+}
+
+/* Header */
+
+.header {
+    height: 75px;
+    padding: 0 25px;
+    background: linear-gradient(90deg, #690078, #a9009c, #620071);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 3px 15px #8b178c55;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+}
+
+.logo span {
+    font-size: 38px;
+    margin-right: 8px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    min-height: 850px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+    background: #f8b9e0;
+}
+
+.cover-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(30,0,30,.15),
+        rgba(255,160,220,.40) 45%,
+        rgba(255,215,240,.97) 73%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    padding-top: 180px;
+}
+
+.heart {
+    font-size: 75px;
+    color: #ff2b9c;
+    text-shadow: 0 0 15px white;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: clamp(55px, 10vw, 85px);
+    line-height: .95;
+    text-shadow: 2px 3px 10px #65104b;
+}
+
+.hero h1 span {
+    color: #ff49b5;
+}
+
+.name-banner {
+    margin: 30px auto 10px;
+    padding: 8px 15px;
+    width: 95%;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(45px, 9vw, 75px);
+    font-weight: bold;
+    background: linear-gradient(90deg, #f50083, #a900a9);
+    border-radius: 50% 15% 50% 15%;
+    box-shadow: 0 5px 15px #9a006b66;
+}
+
+.hero h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.wish-card {
+    padding: 25px 15px;
+    margin: 20px auto;
+    width: 95%;
+    border-radius: 30px;
+    background: rgba(255,255,255,.83);
+    box-shadow: 0 5px 20px #ad4c9166;
+}
+
+.wish-card p {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+.love-text {
+    margin-top: 18px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 27px;
+    color: #c60083;
+    font-weight: bold;
+}
+
+.view-btn {
+    display: inline-block;
+    margin: 15px auto;
+    padding: 15px 35px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #87008d, #d0009d);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px #8a006b55;
+    transition: .3s;
+}
+
+.view-btn:hover {
+    transform: scale(1.06);
+    background: #650078;
+}
+
+/* Footer */
+
+.footer-message {
+    text-align: center;
+    padding: 20px;
+    background: #650078;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+
+.footer-message span {
+    padding: 0 10px;
+}
+
+.bottom-nav {
+    display: none;
+}
+
+/* Mobile */
+
+@media(max-width:600px) {
+
+    .header {
+        height: 65px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .logo span {
+        font-size: 30px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 180px;
+        background: #780080;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 0 0 0 15px;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 850px;
+        padding: 20px 10px;
+    }
+
+    .hero-content {
+        padding-top: 150px;
+    }
+
+    .heart {
+        font-size: 55px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .wish-card {
+        padding: 20px 10px;
+    }
+
+    .wish-card p {
+        font-size: 16px;
+    }
+
+    .love-text {
+        font-size: 23px;
+    }
+
+    .bottom-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: #fff0fa;
+        padding: 12px;
+        border-top: 2px solid #e9a2d7;
+    }
+
+    .bottom-nav a {
+        text-decoration: none;
+        color: #700078;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 23px;
+    }
+
+    .bottom-nav small {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .bottom-heart {
+        color: #e00091;
+        font-size: 30px;
+    }
+}

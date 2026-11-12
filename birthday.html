@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Prativa 2026</title>
+
+    <link rel="stylesheet" href="birthday.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="birthday-header">
+
+    <a href="index.html" class="back-btn">❮</a>
+
+    <div class="header-title">🎂 Birthday</div>
+
+    <a href="index.html" class="home-btn">⌂</a>
+
+</header>
+
+<main class="birthday-container">
+
+    <!-- Birthday Card -->
+
+    <section class="birthday-card">
+
+        <div class="flowers">🌹 🌸 🌹</div>
+
+        <div class="bow">🎀</div>
+
+        <h3>16 November 2026</h3>
+
+        <p class="day">(Monday)</p>
+
+        <div class="divider">
+            <span></span> 💗 <span></span>
+        </div>
+
+        <h2>Happy Birthday</h2>
+
+        <h1>Prativa</h1>
+
+        <p class="age">Celebrating 19 Beautiful Years</p>
+
+        <div class="date-info">
+
+            <div>
+                <strong>16 NOV 2007</strong>
+                <small>Birth Date</small>
+            </div>
+
+            <div class="date-heart">♡</div>
+
+            <div>
+                <strong>16 NOV 2026</strong>
+                <small>Birthday 2026</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Birthday Message -->
+
+    <section class="message-card">
+
+        <div class="message-flower">💐</div>
+
+        <h2>A Special Message For You</h2>
+
+        <p>
+            On your special day, I just want to say...
+
+            You are an amazing friend, a kind heart
+            and a beautiful soul.
+
+            May this new year of your life bring you
+            more happiness, success and all the
+            good things you deserve.
+
+        </p>
+
+        <h3>
+            Happy Birthday once again, Prativa! 💗
+        </h3>
+
+        <div class="signature">
+            — With friends's love, Tirtha ❤️ —
+        </div>
+
+    </section>
+
+
+    <!-- Calendar -->
+
+    <section class="calendar-section">
+
+        <div class="section-heading">
+            <span>📅</span>
+            <h2>November 2026</h2>
+        </div>
+
+        <div class="calendar-card">
+
+            <div class="calendar-top">
+                <span>♡</span>
+                <h3>November 2026</h3>
+                <span>♡</span>
+            </div>
+
+            <div class="calendar-grid" id="calendar">
+
+                <div class="week-name">Sun</div>
+                <div class="week-name">Mon</div>
+                <div class="week-name">Tue</div>
+                <div class="week-name">Wed</div>
+                <div class="week-name">Thu</div>
+                <div class="week-name">Fri</div>
+                <div class="week-name">Sat</div>
+
+            </div>
+
+            <div class="calendar-note">
+                💗 16 November 2007 – Birth Day
+                <br>
+                🎂 16 November 2026 – 19th Birthday
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Gallery -->
+
+    <section class="gallery-section">
+
+        <div class="gallery-heading">
+            <span>▣</span>
+            Your Gallery
+            <span>♥</span>
+        </div>
+
+        <div class="gallery-grid">
+
+            <img src="prativa1.jpeg" alt="Prativa Photo" class="gallery-img">
+
+            <img src="prativa2.jpeg" alt="Birthday Memory" class="gallery-img">
+
+            <img src="prativa3.jpeg" alt="Beautiful Flowers" class="gallery-img">
+
+            <img src="prativa4.jpeg" alt="Birthday Cake" class="gallery-img">
+
+            <img src="prativa5.jpeg" alt="Cute Teddy" class="gallery-img">
+
+            <img src="prativa6.jpeg" alt="Birthday Decoration" class="gallery-img">
+
+        </div>
+
+    </section>
+
+
+    <!-- Photo Viewer -->
+
+    <div class="lightbox" id="lightbox">
+
+        <button id="closeLightbox" aria-label="Close">×</button>
+
+        <img id="lightboxImage" src="" alt="Gallery Preview">
+
+    </div>
+
+</main>
+
+
+<footer class="birthday-footer">
+    ───── ♥ Happy Birthday Prativa ♥ ─────
+</footer>
+
+<nav class="bottom-nav">
+
+    <a href="index.html">🏠<small>Home</small></a>
+
+    <span>♡</span>
+
+    <a href="birthday.html">🎂<small>Birthday</small></a>
+
+</nav>
+
+<script src="script.js"></script>
+
+<script>
+    // Generate November 2026 Calendar
+
+    const calendar = document.getElementById("calendar");
+
+    const firstDay = new Date(2026, 10, 1).getDay();
+    const totalDays = new Date(2026, 11, 0).getDate();
+
+    for (let i = 0; i < firstDay; i++) {
+        const empty = document.createElement("div");
+        empty.className = "empty-day";
+        calendar.appendChild(empty);
+    }
+
+    for (let day = 1; day <= totalDays; day++) {
+
+        const date = document.createElement("div");
+        date.className = "calendar-day";
+        date.textContent = day;
+
+        if (day === 16) {
+            date.classList.add("birthday-date");
+            date.title = "Prativa's 19th Birthday";
+        }
+
+        calendar.appendChild(date);
+    }
+
+
+    // Gallery Lightbox
+
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const closeLightbox = document.getElementById("closeLightbox");
+
+    galleryImages.forEach((img) => {
+
+        img.addEventListener("click", () => {
+
+            lightboxImage.src = img.src;
+            lightbox.classList.add("active");
+
+        });
+
+    });
+
+    closeLightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
+
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            lightbox.classList.remove("active");
+        }
+    });
+
+</script>
+
+</body>
+</html>
